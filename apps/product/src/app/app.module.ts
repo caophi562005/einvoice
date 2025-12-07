@@ -2,10 +2,10 @@ import { MongoProvider } from '@common/configuration/mongo.config';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { CONFIGURATION, TConfiguration } from '../configuration';
-import { InvoiceModule } from './modules/invoice/invoice.module';
+import { ProductModule } from './modules/product/product.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true, load: [() => CONFIGURATION] }), MongoProvider, InvoiceModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true, load: [() => CONFIGURATION] }), MongoProvider, ProductModule],
 })
 export class AppModule {
   static CONFIGURATION: TConfiguration = CONFIGURATION;

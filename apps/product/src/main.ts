@@ -21,7 +21,7 @@ async function bootstrap() {
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  const port = process.env.INVOICE_PORT || 3001;
+  const port = process.env.PRODUCT_PORT || 3002;
 
   await app.startAllMicroservices();
   await app.listen(port);
